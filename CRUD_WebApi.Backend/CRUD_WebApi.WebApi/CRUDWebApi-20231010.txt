@@ -1,0 +1,138 @@
+2023-10-10 18:31:31.310 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-10-10 18:31:31.519 +03:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-10-10 18:31:31.524 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-10-10 18:31:31.526 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-10-10 18:31:31.575 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-10-10 18:31:31.602 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-10-10 18:31:31.633 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-10 18:31:31.973 +03:00 [INF] Now listening on: https://localhost:7188
+2023-10-10 18:31:31.973 +03:00 [INF] Now listening on: http://localhost:5197
+2023-10-10 18:31:31.980 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-10 18:31:31.980 +03:00 [INF] Hosting environment: Development
+2023-10-10 18:31:31.981 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Работа\С#\CRUD-Web-Api\CRUD_WebApi.Backend\CRUD_WebApi.WebApi\
+2023-10-10 18:31:33.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7188/index.html - -
+2023-10-10 18:31:33.949 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7188/index.html - - - 200 - text/html;charset=utf-8 847.6769ms
+2023-10-10 18:31:33.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7188/_framework/aspnetcore-browser-refresh.js - -
+2023-10-10 18:31:33.974 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7188/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 16.3373ms
+2023-10-10 18:31:33.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7188/_vs/browserLink - -
+2023-10-10 18:31:34.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7188/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 445.1199ms
+2023-10-10 18:31:34.507 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7188/swagger/v1/swagger.json - -
+2023-10-10 18:31:34.757 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7188/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.2025ms
+2023-10-10 18:31:50.011 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7188/api/Auth/login application/json 55
+2023-10-10 18:31:50.040 +03:00 [INF] CORS policy execution successful.
+2023-10-10 18:31:50.043 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.AuthController.Auth (CRUD_WebApi.WebApi)'
+2023-10-10 18:31:50.082 +03:00 [INF] Route matched with {action = "Auth", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Auth(CRUD_WebApi.WebApi.Models.AuthenticationAccDto) on controller CRUD_WebApi.WebApi.Controllers.AuthController (CRUD_WebApi.WebApi).
+2023-10-10 18:31:50.299 +03:00 [INF] Request: AuthenticationQuery {"Login":"Morning123","Password":"12345678","$type":"AuthenticationQuery"}
+2023-10-10 18:31:50.712 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__request_Login_0='?' (Size = 20), @__request_Password_1='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Email], [a].[Login], [a].[Password]
+FROM [Accounts] AS [a]
+WHERE [a].[Login] = @__request_Login_0 AND [a].[Password] = @__request_Password_1
+2023-10-10 18:31:50.926 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-10 18:31:50.934 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.AuthController.Auth (CRUD_WebApi.WebApi) in 846.1914ms
+2023-10-10 18:31:50.934 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.AuthController.Auth (CRUD_WebApi.WebApi)'
+2023-10-10 18:31:50.938 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7188/api/Auth/login application/json 55 - 200 - text/plain;+charset=utf-8 926.9312ms
+2023-10-10 18:32:07.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7188/api/User?page=1&pageSize=50 - -
+2023-10-10 18:32:07.951 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.GetAll (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:07.954 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CRUD_WebApi.Application.Users.Queries.GetUsersList.UserListViewModel]] GetAll(System.String, System.String, System.String, System.String, Int32, Int32) on controller CRUD_WebApi.WebApi.Controllers.UserController (CRUD_WebApi.WebApi).
+2023-10-10 18:32:07.980 +03:00 [INF] Request: GetUserListQuery {"Page":1,"PageSize":50,"SortBy":null,"Direction":null,"FilterBy":null,"ParamToFilter":null,"$type":"GetUserListQuery"}
+2023-10-10 18:32:08.222 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Email], [t].[Age], [u0].[Role], [u0].[Id]
+FROM (
+    SELECT [u].[Id], [u].[Name], [u].[Email], [u].[Age]
+    FROM [Users] AS [u]
+    ORDER BY [u].[Id]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [UserRoles] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]
+2023-10-10 18:32:08.230 +03:00 [INF] Executing OkObjectResult, writing value of type 'CRUD_WebApi.Application.Users.Queries.GetUsersList.UserListViewModel'.
+2023-10-10 18:32:08.242 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.UserController.GetAll (CRUD_WebApi.WebApi) in 288.0344ms
+2023-10-10 18:32:08.242 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.GetAll (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:08.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7188/api/User?page=1&pageSize=50 - - - 200 - application/json;+charset=utf-8 383.3944ms
+2023-10-10 18:32:34.370 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7188/api/User application/json 101
+2023-10-10 18:32:34.372 +03:00 [INF] CORS policy execution successful.
+2023-10-10 18:32:34.373 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Create (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:34.375 +03:00 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] Create(CRUD_WebApi.WebApi.Models.CreateUserDto) on controller CRUD_WebApi.WebApi.Controllers.UserController (CRUD_WebApi.WebApi).
+2023-10-10 18:32:34.413 +03:00 [INF] Request: CreateUserCommand {"Name":"Jone","Email":"jonehalib3@mail.ru","Age":25,"Roles":["Admin","User"],"$type":"CreateUserCommand"}
+2023-10-10 18:32:34.635 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Age], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2023-10-10 18:32:34.699 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [UserRoles] USING (
+VALUES (@p3, @p4, 0),
+(@p5, @p6, 1)) AS i ([Role], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Role], [UserId])
+VALUES (i.[Role], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position;
+2023-10-10 18:32:34.719 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-10-10 18:32:34.719 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.UserController.Create (CRUD_WebApi.WebApi) in 343.4107ms
+2023-10-10 18:32:34.719 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Create (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:34.719 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7188/api/User application/json 101 - 200 - application/json;+charset=utf-8 349.5628ms
+2023-10-10 18:32:54.725 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7188/api/User/grant application/json 52
+2023-10-10 18:32:54.730 +03:00 [INF] CORS policy execution successful.
+2023-10-10 18:32:54.731 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Grant (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:54.736 +03:00 [INF] Route matched with {action = "Grant", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] Grant(CRUD_WebApi.WebApi.Models.GrantUserDto) on controller CRUD_WebApi.WebApi.Controllers.UserController (CRUD_WebApi.WebApi).
+2023-10-10 18:32:54.745 +03:00 [INF] Request: GrantUserCommand {"UserId":41,"Role":"SuperAdmin","$type":"GrantUserCommand"}
+2023-10-10 18:32:54.779 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Age], [t].[Email], [t].[Name], [u0].[Id], [u0].[Role], [u0].[UserId]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[Age], [u].[Email], [u].[Name]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__request_UserId_0
+) AS [t]
+LEFT JOIN [UserRoles] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]
+2023-10-10 18:32:54.787 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Role], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-10-10 18:32:54.788 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-10-10 18:32:54.788 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.UserController.Grant (CRUD_WebApi.WebApi) in 51.872ms
+2023-10-10 18:32:54.788 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Grant (CRUD_WebApi.WebApi)'
+2023-10-10 18:32:54.789 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7188/api/User/grant application/json 52 - 200 - application/json;+charset=utf-8 64.1311ms
+2023-10-10 18:33:06.765 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7188/api/User/4 - -
+2023-10-10 18:33:06.765 +03:00 [INF] CORS policy execution successful.
+2023-10-10 18:33:06.766 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi)'
+2023-10-10 18:33:06.772 +03:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller CRUD_WebApi.WebApi.Controllers.UserController (CRUD_WebApi.WebApi).
+2023-10-10 18:33:06.799 +03:00 [INF] Request: DeleteUserCommand {"Id":4,"$type":"DeleteUserCommand"}
+2023-10-10 18:33:06.810 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Age], [u].[Email], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2023-10-10 18:33:06.823 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi) in 50.8575ms
+2023-10-10 18:33:06.824 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi)'
+2023-10-10 18:33:06.824 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7188/api/User/4 - - - 404 - application/json 59.2690ms
+2023-10-10 18:33:11.996 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7188/api/User/41 - -
+2023-10-10 18:33:11.997 +03:00 [INF] CORS policy execution successful.
+2023-10-10 18:33:11.997 +03:00 [INF] Executing endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi)'
+2023-10-10 18:33:11.997 +03:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller CRUD_WebApi.WebApi.Controllers.UserController (CRUD_WebApi.WebApi).
+2023-10-10 18:33:11.998 +03:00 [INF] Request: DeleteUserCommand {"Id":41,"$type":"DeleteUserCommand"}
+2023-10-10 18:33:12.011 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Age], [u].[Email], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2023-10-10 18:33:12.062 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Users]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-10-10 18:33:12.074 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-10-10 18:33:12.074 +03:00 [INF] Executed action CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi) in 77.2242ms
+2023-10-10 18:33:12.074 +03:00 [INF] Executed endpoint 'CRUD_WebApi.WebApi.Controllers.UserController.Delete (CRUD_WebApi.WebApi)'
+2023-10-10 18:33:12.075 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7188/api/User/41 - - - 204 - - 78.4873ms
